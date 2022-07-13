@@ -1,0 +1,33 @@
+.block {
+    margin: 0px;
+    padding: 16px;
+    border: solid black 1px;
+    background-color: white;
+    height: 16px;
+    width: 16px;
+}
+
+body {
+    margin: 2px;
+}
+
+#parent{
+    display: flex;
+    justify-content: center;
+}
+
+.color{
+    background-color: blue;
+}
+
+#main{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
