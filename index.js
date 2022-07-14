@@ -5,7 +5,13 @@ window.onload = () => {
         const domTarget = e.target;
         draw(data,domTarget);
     });
-    document.addEventListener("click",() => location.reload() )
+    document.addEventListener("click",() => {
+        removeGrid();
+        //location.reload();
+        let number = prompt("Number of Grid","6");
+        
+        createPlane(number);
+    } )
 }
 
 function draw(data,domTarget){
@@ -13,12 +19,13 @@ function draw(data,domTarget){
         domTarget.classList.add("color");
     }
 }
-
-function createPlane(){
-    for(var j = 0; j < 6;){
+//TODO: modified so that j and i can get value from prompt
+function createPlane(number){
+    for(var j = 0; j < modifiedGrid(number);){
         const createColumn = document.createElement("div");
         j++;
-        for(var i = 0; i < 6;i++){
+        for(var i = 0; i < modifiedGrid(number);i++){
+            //Create <>
             const parentBlock = document.getElementById("parent");
             parentBlock.appendChild(createColumn);
             createColumn.setAttribute("id", "column" + j);
@@ -29,5 +36,21 @@ function createPlane(){
             block.setAttribute("class", "block");
             block.setAttribute("data-block", "alock");
         }
+    }
+}
+//removing childNode of the parent 
+function removeGrid(){
+    const parentBlock = document.getElementById("parent");
+    while (parentBlock.firstChild) {
+        parentBlock.removeChild(parentBlock.firstChild);
+    } 
+}
+
+function modifiedGrid(number){
+    if(number != undefined){
+         return number;
+    } else { 
+        console.log(number)
+        return 6;
     }
 }
