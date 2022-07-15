@@ -1,7 +1,7 @@
 .block {
     margin: 0px;
     padding: 0px;
-    border: solid black 1px;
+    border: solid rgb(205, 205, 205) 0.01px;
     background-color: white;
     /* height: 81.5px;
     width: 81.5px; */
@@ -21,8 +21,14 @@ body {
     grid-template-columns: auto auto auto;
 }
 
+#parent-container{
+    border: solid black 1px;
+    padding: 15px;
+    background-color: rgb(38, 129, 139);
+}
+
 .color{
-    background-color: blue;
+    background-color: rgb(106, 240, 133);
 }
 
 #main{
