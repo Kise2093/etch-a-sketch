@@ -21,6 +21,10 @@ function draw(data,domTarget){
 }
 //TODO: modified so that j and i can get value from prompt
 function createPlane(number){
+    const ratioW = (500/(number));
+    const ratioH = (500/(number));
+    // const ratioW = ((960/(number * 2))*2);
+    // const ratioH = ((960/(number * 2))*2);
     for(var j = 0; j < modifiedGrid(number);){
         const createColumn = document.createElement("div");
         j++;
@@ -35,6 +39,7 @@ function createPlane(number){
             columnNumberN.appendChild(block);
             block.setAttribute("class", "block");
             block.setAttribute("data-block", "alock");
+            block.setAttribute("style","width:" + ratioW +"px; height:" + ratioH +"px; padding: 0px;");
         }
     }
 }
@@ -46,7 +51,7 @@ function removeGrid(){
     } 
 }
 
-function modifiedGrid(number){
+function modifiedGrid(number){    
     if(number != undefined){
          return number;
     } else { 
