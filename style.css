@@ -3,8 +3,8 @@
     padding: 0px;
     border: solid black 1px;
     background-color: white;
-    height: 81.5px;
-    width: 81.5px;
+    /* height: 81.5px;
+    width: 81.5px; */
 }
 
 body {
@@ -12,12 +12,13 @@ body {
 }
 
 #parent{
-    display: flex;
+    display: grid;
     /* justify-content: center; */
     height: 500px;
     width: 500px;
     /* border: solid black 1px; */
     padding: 0px;
+    grid-template-columns: auto auto auto;
 }
 
 .color{
