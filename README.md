@@ -15,3 +15,5 @@ The challenge I ran into most often in this project was figuring out that flexbo
 ## Screenshots ##
 
 ![Desktop view screenshot](/images/screenshot.png)
+
+Create by Kris
