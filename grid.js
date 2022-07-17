@@ -1,5 +1,6 @@
 //set default color
 var whatColor = 'rgb(106, 240, 133);';
+
 window.onload = () => {
     createPlane(3);
     document.addEventListener("mouseover", function(e) {
@@ -20,9 +21,14 @@ window.onload = () => {
         }
         // if you want to change color click randColor button
         else if(e.target.dataset.button == "randColor"){
+            const getSampleDOM = document.getElementById('sample');
             console.log("COLOR")
             //set random color ontop of default color
             whatColor = changeColor();
+            console.log(whatColor)
+            //set sample div into a color
+            getSampleDOM.style.backgroundColor = "#" + whatColor;
+            getSampleDOM.style.border = 'solid #' + whatColor + ' 1px'; 
         }
     } )
 }
