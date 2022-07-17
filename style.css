@@ -40,5 +40,14 @@ body {
 .container{
     margin: 20px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button{ 
+    margin: 5px;
+    padding: 25px;
+    background-color: rgb(230, 223, 166);
+    border: solid rgb(230, 223, 166);
+    color: rgb(0, 0, 0);
 }
